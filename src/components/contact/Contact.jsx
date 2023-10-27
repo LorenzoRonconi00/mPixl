@@ -54,7 +54,7 @@ const Contact = () => {
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 variants={variants}>Inizia un progetto con noi!</motion.h1>
         <motion.div className="item" variants={variants}>
-          <h2 style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
+          <h2 style={{ display: "flex", alignItems: "center", marginBottom: "8px"}}>
             <AiOutlineMail size={25} style={{ color: "orange", marginRight: "12px" }} />
             Email
           </h2>

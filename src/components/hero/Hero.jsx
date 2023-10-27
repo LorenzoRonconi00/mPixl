@@ -90,7 +90,7 @@ const Hero = () => {
             </motion.div>
             <div className="imageContainer">
                 <Lottie
-                style={{width: "900px", height: "900px", marginRight: "200px"}}
+                className="lottieHero"
                 animationData={animationData1}/>
             </div>
         </div>
