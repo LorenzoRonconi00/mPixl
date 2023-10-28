@@ -42,10 +42,7 @@ const Services = () => {
             </motion.div>
             <motion.div className="titleContainer" variants={variants}>
                 <div className="title">
-                    <Lottie 
-                    style={{width: "500px", height: "200px", borderRadius: "50px", 
-                    objectFit: "cover"}}
-                    animationData={animationData}/>
+                    
                     <h1>
                         <motion.b whileHover={{color: "orange"}}>Sviluppo</motion.b> e 
                         <motion.b whileHover={{color: "orange"}}> Design Web</motion.b>

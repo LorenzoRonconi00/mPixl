@@ -1,7 +1,8 @@
 @import "../../app.scss";
 
 .navbar{
-    height: 100px;
+    z-index: 100;
+    position: sticky;
 
     .wrapper{
         max-width: 1366px;
@@ -19,6 +20,9 @@
         img{
             width: 125px;
             height: 50px;
+            margin-top: 25px;
+            margin-bottom: 20px;
+            margin-left: 100px;
 
             @include mobile{
                 display: none;
@@ -26,6 +30,7 @@
         }
 
         .social{
+            margin-right: 35px;
             display: flex;
             gap: 20px;
 

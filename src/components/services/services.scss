@@ -43,6 +43,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30px;
 
         @include mobile{
             width: 100%;
@@ -50,8 +51,9 @@
 
         .title{
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 50px;
+            gap: 30px;
 
             @include mobile{
                 flex-direction: column;
@@ -93,6 +95,7 @@
                 border: none;
                 font-size: 24px;
                 cursor: pointer;
+                
 
                 @include mobile{
                     font-size: 16px;
@@ -108,6 +111,8 @@
         display: flex;
         max-width: 1366px;
         margin: auto;
+        gap: 20px;
+        
 
         @include mobile{
             flex-direction: column;
@@ -122,6 +127,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            border-radius: 20px;
 
             @include mobile{
                 border: none;
