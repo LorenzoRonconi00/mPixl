@@ -52,10 +52,10 @@ const Contact = () => {
       className="contact"
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 variants={variants}>Inizia un progetto con noi!</motion.h1>
+        <motion.h1 className="font-semibold" variants={variants}>Inizia un <p className="text-[aqua] inline">progetto</p> con noi!</motion.h1>
         <motion.div className="item" variants={variants}>
           <h2 style={{ display: "flex", alignItems: "center", marginBottom: "8px"}}>
-            <AiOutlineMail size={25} style={{ color: "orange", marginRight: "12px" }} />
+            <AiOutlineMail size={25} style={{ color: "#cf8bea", marginRight: "12px" }} />
             Email
           </h2>
           <a href="mailto:lorenzoronconi60@gmail.com">
@@ -67,7 +67,7 @@ const Contact = () => {
         </motion.div>
         <motion.div className="item" variants={variants}>
           <h2 style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
-            <BsPinFill size={25} style={{ color: "orange", marginRight: "12px" }} />
+            <BsPinFill size={25} style={{ color: "#cf8bea", marginRight: "12px" }} />
             Dove siamo
           </h2>
           <a
@@ -80,7 +80,7 @@ const Contact = () => {
         </motion.div>
         <div className="item">
           <h2 style={{ display: "flex", alignItems: "center", marginBottom: "8px" }}>
-            <BsFillTelephoneFill size={21} style={{ color: "orange", marginRight: "12px" }} />
+            <BsFillTelephoneFill size={21} style={{ color: "#cf8bea", marginRight: "12px" }} />
             Telefono
           </h2>
           <a href="tel:+393318389305">

@@ -67,7 +67,7 @@ const Hero = () => {
               }}
               variants={textVariants}
               whileHover={{
-                background: "orange",
+                background: "aqua",
                 transition: { duration: 0.5 },
               }}
             >

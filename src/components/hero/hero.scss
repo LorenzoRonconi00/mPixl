@@ -33,7 +33,7 @@
 
             h2{
                 font-size: 30px;
-                color: aqua;
+                color: #cf8bea;
                 letter-spacing: 4px;
             }
 
@@ -57,8 +57,9 @@
                     font-weight: bold;
                     transition: background-color 0.5s;
                     &:hover{
-                        border: 1px solid orange;
-                        background-color: orange;
+                        border: 1px solid aqua;
+                        background-color: aqua;
+                        color: black;
                     }
                 }
 

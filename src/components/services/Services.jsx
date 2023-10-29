@@ -44,13 +44,13 @@ const Services = () => {
                 <div className="title">
                     
                     <h1>
-                        <motion.b whileHover={{color: "orange"}}>Sviluppo</motion.b> e 
-                        <motion.b whileHover={{color: "orange"}}> Design Web</motion.b>
+                        <motion.b whileHover={{color: "aqua"}}>Sviluppo</motion.b> e 
+                        <motion.b whileHover={{color: "aqua"}}> Design Web</motion.b>
                     </h1>
                 </div>
                 <div className="title">
                     <h1>
-                        per il tuo <motion.b whileHover={{color: "orange"}}>Successo.</motion.b>
+                        per il tuo <motion.b whileHover={{color: "aqua"}}>Successo.</motion.b>
                     </h1>
                     <a href="#Progetti">COSA REALIZZIAMO</a>
                 </div>

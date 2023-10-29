@@ -6,6 +6,12 @@ html{
     scroll-snap-type: y mandatory;
     overscroll-behavior: inherit;
     --cursor-color: #05E1E3;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 html.dark-mode {
