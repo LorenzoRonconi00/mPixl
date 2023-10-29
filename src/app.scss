@@ -2,12 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+html {
+    --cursor-color: #05E1E3; 
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
     scroll-behavior: smooth;
-    --cursor-color: #05E1E3;
 }
 
 section{
@@ -15,14 +14,15 @@ section{
     scroll-snap-align: start;
 }
 
-html.dark-mode {
-    --cursor-color: #fff;
-}
-
 @keyframes scroll {
   0% { transform: translateY(0); }
   100% { transform: translateY(-100%); }
 }
+
+html.dark-mode {
+    --cursor-color: #fff;
+}
+
 
 *{
     padding: 0;
