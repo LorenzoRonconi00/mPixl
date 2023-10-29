@@ -14,15 +14,19 @@ const NavBar = () => {
         </a>
         {/* Items */}
         <div className="flex items-center justify-center gap-10">
-          <a href="#" className="text-white hover:text-gray-200">
+          <a href="#Home" className="text-white hover:text-[#05E1E3]">
             Home
             <span className="sr-only">Home</span>
           </a>
-          <a href="#" className="text-white hover:text-gray-200">
+          <a href="#Servizi" className="text-white hover:text-[#05E1E3]">
+            Servizi
+            <span className="sr-only">Servizi</span>
+          </a>
+          <a href="#Progetti" className="text-white hover:text-[#05E1E3]">
             Progetti
             <span className="sr-only">Progetti</span>
           </a>
-          <a href="#" className="text-white hover:text-gray-200">
+          <a href="#Contatti" className="text-white hover:text-[#05E1E3] mr-10">
             Contatti
             <span className="sr-only">Contatti</span>
           </a>

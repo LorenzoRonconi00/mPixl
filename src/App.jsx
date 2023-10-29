@@ -1,6 +1,7 @@
 
 import "./app.scss";
 import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
 import Hero from "./components/hero/Hero";
 import NavBar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
@@ -10,11 +11,11 @@ import AnimatedCursor from "react-animated-cursor";
 
 const App = () => {
   return <div>
-    {/* <AnimatedCursor 
-    innerSize={8}
-    outerSize={35}
+    <AnimatedCursor
+    innerSize={12}
+    outerSize={55}
     innerScale={1}
-    outerScale={2}
+    outerScale={1.5}
     outerAlpha={0}
     hasBlendMode={true}
     innerStyle={{
@@ -23,7 +24,8 @@ const App = () => {
     outerStyle={{
       border: '3px solid var(--cursor-color)'
     }}
-    /> */}
+  />
+    {/* <Cursor /> */}
     <section id="Home">
       <NavBar />
       <Hero />

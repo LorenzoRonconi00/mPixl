@@ -1,14 +1,14 @@
 @import "../../app.scss";
 
-.circle{
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    background-color: black;
-    position: absolute;
+.cursor{
+    background-color: aqua;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 998;
 
     @include mobile{
         display: none;

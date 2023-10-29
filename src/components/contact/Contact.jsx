@@ -59,10 +59,10 @@ const Contact = () => {
             Email
           </h2>
           <a href="mailto:lorenzoronconi60@gmail.com">
-            <span style={{ fontWeight: "bold" }}>lorenzoronconi60@gmail.com</span>
+            <span style={{ fontWeight: "bold" }} className="z-999">lorenzoronconi60@gmail.com</span>
           </a>
           <a href="mailto:federicocervelli01@gmail.com">
-            <span style={{ fontWeight: "bold" }}>federicocervelli01@gmail.com</span>
+            <span style={{ fontWeight: "bold" }} >federicocervelli01@gmail.com</span>
           </a>
         </motion.div>
         <motion.div className="item" variants={variants}>
@@ -74,8 +74,9 @@ const Contact = () => {
             href="https://www.google.com/maps?q=Perugia, Italia"
             target="_blank"
             rel="noopener noreferrer"
+            className="z-999"
           >
-            <span style={{ fontWeight: "bold" }}>Perugia, Italia</span>
+            <span style={{ fontWeight: "bold" }} >Perugia, Italia</span>
           </a>
         </motion.div>
         <div className="item">
