@@ -15,8 +15,10 @@
     "lottie-react": "^2.4.0",
     "lottie-web": "^5.12.2",
     "react": "18.2.0",
+    "react-animated-cursor": "^2.11.2",
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
+    "react-use-scroll-snap": "^1.0.0",
     "sass": "^1.68.0"
   },
   "devDependencies": {

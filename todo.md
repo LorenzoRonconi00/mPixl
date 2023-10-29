@@ -1,9 +1,15 @@
 DA FARE:
 
-finire la navbar
+Finire la navbar
 - Desktop
 - Mobile
 
 Fixare le animazioni parallasse su mobile
 
-Rifare/Migliorare sezione progetti realizzati
+Usare Blend Mode Cursore
+
+Creare Custom Scrollbar
+
+Modificare accento colore
+
+Fixare sezione progetti
