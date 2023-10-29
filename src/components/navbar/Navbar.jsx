@@ -1,4 +1,5 @@
 import Logo from "../../assets/logo.svg";
+import "./navbar.scss";
 
 const NavBar = () => {
   return (
@@ -13,20 +14,20 @@ const NavBar = () => {
           />
         </a>
         {/* Items */}
-        <div className="flex items-center justify-center gap-10">
-          <a href="#Home" className="text-white hover:text-[#05E1E3]">
+        <div className="flex items-center justify-center gap-10 text-[22px] lowercase">
+          <a href="#Home" className="nav-link">
             Home
             <span className="sr-only">Home</span>
           </a>
-          <a href="#Servizi" className="text-white hover:text-[#05E1E3]">
+          <a href="#Servizi" className="nav-link">
             Servizi
             <span className="sr-only">Servizi</span>
           </a>
-          <a href="#Progetti" className="text-white hover:text-[#05E1E3]">
+          <a href="#Progetti" className="nav-link">
             Progetti
             <span className="sr-only">Progetti</span>
           </a>
-          <a href="#Contatti" className="text-white hover:text-[#05E1E3] mr-10">
+          <a href="#Contatti" className="nav-link mr-10">
             Contatti
             <span className="sr-only">Contatti</span>
           </a>

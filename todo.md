@@ -10,6 +10,4 @@ Usare Blend Mode Cursore
 
 Creare Custom Scrollbar
 
-Modificare accento colore
-
 Fixare sezione progetti
