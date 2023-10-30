@@ -1,8 +1,8 @@
+import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import "./portfolio.scss";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import Contact from "../contact/Contact";
 
-const items = [
+const cards = [
     {
         id: 1,
         title: "SNL Shipping",
@@ -24,74 +24,51 @@ const items = [
         desc: "Sito web per rivendita di ricambi online",
         url: "https://mecspare2.vercel.app/"
     },
-];
+  ];
 
-const Single = ({
-    item,
-    id
-}) => {
+const Portfolio = () => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+  });
 
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
 
-    const ref = useRef();
+  return (
+    <div ref={targetRef} className="relative h-[300vh]">
+      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+        <motion.div style={{ x }} className="flex gap-4">
+          {cards.map((card) => {
+            return <Card card={card} key={card.id} />;
+          })}
+        </motion.div>
+      </div>
+    </div>
+  );
+};
 
-    const {scrollYProgress} = useScroll({
-        target: ref, 
-    });
+const Card = ({ card }) => {
+  return (
+    <div
+      key={card.id}
+      className="group relative h-[450px] w-[1000px] overflow-hidden bg-neutral-200"
+    >
+      <div
+        style={{
+          backgroundImage: `url(${card.img})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
+      ></div>
+      <div className="absolute inset-0 z-10 grid place-content-end w-full">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-sm m-auto px-10">
+          {card.title}
+        </p>
+      </div>
+    </div>
+  );
+};
 
-    const y = useTransform(scrollYProgress, [0,1], [-100,100]);
-
-    const handleButton = () => {
-        window.open(item.url, "_blank");
-    }
-
-    return (
-        <section id={id}>
-            <div className="container">
-                <div className="wrapper">
-                    <div className="imageContainer" ref={ref}>
-                        <img src={item.img} alt="" />
-                    </div>
-                    <motion.div className="textContainer" style={{y}}>
-                        <h2>{item.title}</h2>
-                        <p>{item.desc}</p>
-                        <button onClick={handleButton}>Visita</button>
-                    </motion.div>
-                </div>
-            </div>
-        </section>
-    )
-}
-
-const Portfolio = ({
-    id
-}) => {
-
-    const ref = useRef();
-
-    const {scrollYProgress} = useScroll({
-        target: ref, 
-        offset: ["end end", "start start"]
-    });
-
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-    })
-
-    return ( 
-        <div className="portfolio" ref={ref}>
-            <div className="progress">
-                <h1>Progetti realizzati</h1>
-                <motion.div 
-                style={{scaleX: scaleX}}
-                className="progressBar">
-                </motion.div>
-            </div>
-            {items.map(item => (
-                <Single item={item} key={item.id} id={id}/>
-            ))}
-        </div>
-     );
-}
- 
 export default Portfolio;
+

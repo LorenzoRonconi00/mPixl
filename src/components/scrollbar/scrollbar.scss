@@ -2,7 +2,7 @@
 
 .scroll-indicator{
     position: fixed;
-    right: 100px;
+    right: 40px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -45,7 +45,7 @@
         text-transform: lowercase;
         font-size: 23px;
         pointer-events: none;
-        box-shadow: 0 7px 14px -6px rgba(0, 0, 0, 0.8);
+        
         opacity: 0;
         transition: all 400ms ease;
     }

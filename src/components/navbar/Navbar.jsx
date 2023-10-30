@@ -3,7 +3,7 @@ import "./navbar.scss";
 
 const NavBar = () => {
   return (
-    <div className="sticky top-0 z-50 h-20 w-full items-center px-5 pt-5">
+    <div className="fixed top-0 z-50 h-20 w-full items-center px-5 pt-5">
       <div className="INNER-CONTAINER flex flex-row justify-between">
         {/* Logo */}
         <a href="#Home">
