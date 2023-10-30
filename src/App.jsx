@@ -5,6 +5,7 @@ import Hero from "./components/hero/Hero";
 import NavBar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
 import Portfolio from "./components/portfolio/Portfolio";
+import Scrollbar from "./components/scrollbar/Scrollbar";
 import Services from "./components/services/Services";
 import AnimatedCursor from "react-animated-cursor";
 
@@ -23,7 +24,8 @@ const App = () => {
     outerStyle={{
       border: '3px solid var(--cursor-color)',
     }}
-  />
+    />
+    <Scrollbar />
     <section id="Home">
       <NavBar />
       <Hero />

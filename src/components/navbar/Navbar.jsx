@@ -6,11 +6,11 @@ const NavBar = () => {
     <div className="sticky top-0 z-50 h-20 w-full items-center px-5 pt-5">
       <div className="INNER-CONTAINER flex flex-row justify-between">
         {/* Logo */}
-        <a href="#">
+        <a href="#Home">
           <img
             src={Logo}
             alt="logo"
-            className="h-12 text-white cursor-pointer"
+            className="h-12 text-white cursor-pointer ml-10"
           />
         </a>
         {/* Items */}
