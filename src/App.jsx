@@ -11,7 +11,7 @@ import AnimatedCursor from "react-animated-cursor";
 const App = () => {
   return (
     <div>
-      {
+      {/* {
         <AnimatedCursor
           innerSize={8}
           outerSize={35}
@@ -26,7 +26,7 @@ const App = () => {
             border: "3px solid var(--cursor-color)",
           }}
         />
-      }
+      } */}
       <Scrollbar />
       <NavBar />
       <section id="Home">

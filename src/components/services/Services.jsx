@@ -38,22 +38,21 @@ const Services = () => {
       <motion.div className="titleContainer pt-20" variants={variants}>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "aqua" }}>Sviluppo</motion.b> e
-            <motion.b whileHover={{ color: "aqua" }}> Design Web</motion.b>
+            <b>Sviluppo</b> e
+            <b> Design Web</b>
           </h1>
         </div>
         <div className="title">
           <h1>
             per il tuo{" "}
-            <motion.b whileHover={{ color: "aqua" }}>Successo.</motion.b>
+            <b>Successo.</b>
           </h1>
           <a href="#Progetti">COSA REALIZZIAMO</a>
         </div>
       </motion.div>
       <motion.div className="listContainer px-5 pb-10" variants={variants}>
-        <motion.div
+        <div
           className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
         >
           <h2>Design</h2>
           <p>
@@ -61,7 +60,7 @@ const Services = () => {
             cattura l'essenza del tuo marchio e affascina i visitatori.
           </p>
           <button>Vai</button>
-        </motion.div>
+        </div>
         <motion.div
           className="box"
           whileHover={{ background: "lightgray", color: "black" }}

@@ -30,6 +30,7 @@
     a.active::after{
         background: aqua;
         transform: translate(-50%, -50%) scale(1.6);
+        transition: all 1s;
     }
 
     a::before{
@@ -53,5 +54,6 @@
     a:hover::before{
         opacity: 1;
         transform: translate(0, -50%);
+        
     }
 }
