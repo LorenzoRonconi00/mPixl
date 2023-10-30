@@ -11,7 +11,7 @@ import AnimatedCursor from "react-animated-cursor";
 
 const App = () => {
   return <div>
-    <AnimatedCursor
+    {/* <AnimatedCursor
     innerSize={8}
     outerSize={35}
     innerScale={1}
@@ -24,16 +24,16 @@ const App = () => {
     outerStyle={{
       border: '3px solid var(--cursor-color)',
     }}
-    />
+    /> */}
     <Scrollbar />
     <section id="Home">
       <NavBar />
       <Hero />
     </section>
     <section id="Servizi"><Parallax type="servizi"/></section>
-    <section><Services /></section>
+    <section id="Servizi"><Services /></section>
     <section id="Progetti"><Parallax type="progetti"/></section>
-    <Portfolio />
+    <Portfolio id="Progetti"/>
     <section id="Contatti"><Contact /></section>
   </div>;
 };

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 html{
-    scroll-snap-type: y mandatory;
-    overscroll-behavior: inherit;
+    //scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
     --cursor-color: #05E1E3;
 
     -webkit-touch-callout: none;
@@ -20,7 +20,7 @@ html{
     margin: 0;
     box-sizing: border-box;
     font-family: "DM Sans", sans-serif;
-    //cursor: none;
+    // cursor: none;
 }
 
 body{

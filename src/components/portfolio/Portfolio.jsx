@@ -26,7 +26,10 @@ const items = [
     },
 ];
 
-const Single = ({item}) => {
+const Single = ({
+    item,
+    id
+}) => {
 
 
     const ref = useRef();
@@ -42,7 +45,7 @@ const Single = ({item}) => {
     }
 
     return (
-        <section>
+        <section id={id}>
             <div className="container">
                 <div className="wrapper">
                     <div className="imageContainer" ref={ref}>
@@ -59,7 +62,9 @@ const Single = ({item}) => {
     )
 }
 
-const Portfolio = () => {
+const Portfolio = ({
+    id
+}) => {
 
     const ref = useRef();
 
@@ -83,7 +88,7 @@ const Portfolio = () => {
                 </motion.div>
             </div>
             {items.map(item => (
-                <Single item={item} key={item.id}/>
+                <Single item={item} key={item.id} id={id}/>
             ))}
         </div>
      );
