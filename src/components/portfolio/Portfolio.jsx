@@ -1,8 +1,8 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import Contact from "../contact/Contact";
+import Parallax from "../parallax/Parallax";
 
-const cards = [
+export const cards = [
     {
         id: 1,
         title: "SNL Shipping",
@@ -35,7 +35,8 @@ const Portfolio = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-50%"]);
 
   return (
-    <div ref={targetRef} className="relative h-[300vh]">
+    <div ref={targetRef} className="relative h-[300vh] z-10">
+      <Parallax />
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
@@ -47,7 +48,7 @@ const Portfolio = () => {
   );
 };
 
-const Card = ({ card }) => {
+export const Card = ({ card }) => {
   return (
     <div
       key={card.id}

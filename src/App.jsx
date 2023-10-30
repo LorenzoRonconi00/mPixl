@@ -35,11 +35,9 @@ const App = () => {
       <section id="Servizi">
         <Services />
       </section>
-
       <section id="Progetti">
         <Portfolio />
       </section>
-
       <section id="Contatti">
         <Contact />
       </section>

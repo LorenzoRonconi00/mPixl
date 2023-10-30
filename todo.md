@@ -1,13 +1,11 @@
 DA FARE:
 
-Finire la navbar
-- Desktop
-- Mobile
+    Finire la navbar:
+    - Per mobile  menu hamburger
 
-Fixare le animazioni parallasse su mobile
+    Usare Blend Mode Cursore
 
-Usare Blend Mode Cursore
+    Fixare sezione progetti
 
-Creare Custom Scrollbar
-
-Fixare sezione progetti
+    Mobile: 
+    - Fixare

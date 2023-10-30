@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import "./parallax.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Portfolio from "../portfolio/Portfolio";
 
 const Parallax = ({
     type
@@ -20,24 +21,14 @@ const Parallax = ({
         ref={ref}
         className="parallax" 
         style={{background: type === "servizi" 
-            ? "linear-gradient(180deg, #111132, #0c0c1d)" 
-            : "linear-gradient(180deg, #111132, #505064)"
+            ? "linear-gradient(180deg, #0C0C1F, #0C0C1F)" 
+            : "linear-gradient(180deg, #0C0C1F, #505064)"
         }}
         >
             <motion.h1 style={{y: yText}}>
                 {type === "servizi" ? "Cosa facciamo" : "Cosa abbiamo realizzato"}
             </motion.h1>
             <motion.div className="mountains"></motion.div>
-            <motion.div 
-            className="planets" 
-            style={{
-                y: yBg,
-                backgroundImage: `url(${type === "servizi" 
-                    ? "/planets.png"
-                    : "/sun.png"
-                })`
-            }}
-            ></motion.div>
             <motion.div className="stars" style={{x: yBg}}></motion.div>
         </div>
      );
