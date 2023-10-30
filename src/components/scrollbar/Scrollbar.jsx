@@ -21,7 +21,7 @@ const Scrollbar = () => {
     };
 
     const options = {
-        threshold: 0.1
+        threshold: 0.2
     };
 
     const observer = new IntersectionObserver(addActiveClass, options);
