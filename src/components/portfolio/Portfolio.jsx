@@ -38,7 +38,7 @@ const Portfolio = () => {
   return (
     
     <div ref={targetRef} className="relative h-[300vh] z-10">
-      <div className="sticky top-0 w-screen flex h-screen items-center overflow-hidden parallax">
+      <div className="sticky top-0 w-screen flex h-screen items-center overflow-y-hidden parallax">
         
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
