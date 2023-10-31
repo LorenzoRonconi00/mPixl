@@ -35,7 +35,7 @@ const Services = () => {
       animate={"animate"}
     >
 
-      <motion.div className="titleContainer pt-20" variants={variants}>
+      <motion.div className="titleContainer pt-20 mt-52" variants={variants}>
         <div className="title">
           <h1>
             <b>Sviluppo</b> e

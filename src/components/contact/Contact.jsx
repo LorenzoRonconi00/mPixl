@@ -74,7 +74,7 @@ const Contact = () => {
             href="https://www.google.com/maps?q=Perugia, Italia"
             target="_blank"
             rel="noopener noreferrer"
-            className="z-999"
+            className=""
           >
             <span style={{ fontWeight: "bold" }} >Perugia, Italia</span>
           </a>
