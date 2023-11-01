@@ -70,18 +70,18 @@ const Hero = () => {
               <motion.a
                 href="#Progetti"
                 variants={textVariants}
-                className=" border border-white bg-transparent hover:bg-aqua-500 hover:border-aqua-500 text-white font-bold py-5 px-8 rounded-lg"
+                className=" border border-white bg-transparent hover:border-[aqua] duration-700 text-white font-bold py-5 px-8 rounded-lg"
               >
                 I nostri progetti
               </motion.a>
               <motion.a
                 href="#Contatti"
                 variants={textVariants}
-                className=" border border-white bg-white text-black font-bold py-5 px-8 rounded-lg hover:bg-aqua-500 hover:text-black hover:border-aqua-500 text-center"
-                whileHover={{
-                  background: "aqua",
-                  transition: { duration: 0.5 },
-                }}
+                className=" border border-white bg-white text-black font-bold py-5 px-8 rounded-lg hover:bg-[aqua] duration-700 text-center"
+                // whileHover={{
+                //   background: "aqua",
+                //   transition: { duration: 0.5 },
+                // }}
               >
                 Scrivici
               </motion.a>
