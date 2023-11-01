@@ -46,8 +46,8 @@ const Portfolio = () => {
           })}
         </motion.div>
         
-        <motion.div className="hidden md:mountains md:pointer-events-none"></motion.div>
-        <motion.div className="hidden md:stars md:pointer-events-none" style={{ x: yBg, opacity: "20%" }}></motion.div>
+        <motion.div className="hidden md:block mountains md:pointer-events-none"></motion.div>
+        <motion.div className="hidden md:block stars md:pointer-events-none" style={{ x: yBg, opacity: "20%" }}></motion.div>
       </div>
     </div>
    

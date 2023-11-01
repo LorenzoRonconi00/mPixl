@@ -49,7 +49,7 @@ const Contact = () => {
       variants={variants}
       initial="initial"
       whileInView="animate"
-      className="contact"
+      className="contact h-screen"
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 className="font-semibold" variants={variants}>Inizia un <p className="text-[aqua] inline">progetto</p> con noi!</motion.h1>
