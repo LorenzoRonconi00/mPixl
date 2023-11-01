@@ -35,7 +35,7 @@ const Services = () => {
       animate={"animate"}
     >
 
-      <motion.div className="titleContainer pt-20 mt-52" variants={variants}>
+      <motion.div className="titleContainer pt-20" variants={variants}>
         <div className="title">
           <h1>
             <b>Sviluppo</b> e
@@ -50,7 +50,7 @@ const Services = () => {
           <a href="#Progetti">COSA REALIZZIAMO</a>
         </div>
       </motion.div>
-      <motion.div className="listContainer px-5 pb-10" variants={variants}>
+      <motion.div className="listContainer px-10 lg:px-16 pb-10 grid xl:grid-cols-4 grid-cols-2" variants={variants}>
         <div
           className="box"
         >

@@ -1,4 +1,3 @@
-import "./hero.scss";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import animationData1 from "../../animation_lo7pktqf.json";
@@ -42,49 +41,53 @@ const sliderVariants = {
 
 const Hero = () => {
   return (
-    <div className="hero">
-      <div className="wrapper">
+    <div className="hero h-screen w-full overflow-hidden bg-gradient-to-b from-[#0c0c1d] to-[#111132] ">
+      <div className="wrapper flex flex-col items-center justify-center align-middle h-full">
         <motion.div
-          className="textContainer"
+          className="flex flex-col items-center"
           variants={textVariants}
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Benvenuto in mPixl!</motion.h2>
-          <motion.h1 variants={textVariants}>
-            Il tuo Sito in pochi click
+          <motion.h2
+            className="px-5 md:text-md leading-7 text-3xl text-[#cf8bea] tracking-wider"
+            variants={textVariants}
+          >
+            Benvenuto in mPixl!
+          </motion.h2>
+          <motion.h1
+            className="px-5 mt-10 text-6xl"
+            variants={textVariants}
+          >
+            Il tuo Sito in pochi click.
           </motion.h1>
-          <motion.div variants={textVariants} className="buttons">
-            <motion.a href="#Progetti" variants={textVariants} className="">
-              I nostri progetti
-            </motion.a>
-            <motion.a
-              href="#Contatti"
-              style={{
-                background: "white",
-                color: "black",
-                transition: "background 0.5s",
-              }}
+          <div className="w-full flex flex-col items-center">
+            <motion.div
               variants={textVariants}
-              whileHover={{
-                background: "aqua",
-                transition: { duration: 0.5 },
-              }}
-              className="m-4"
+              class=" w-fit buttons flex gap-4 mt-10 flex-col md:flex-row justify-center "
             >
-              Scrivici
-            </motion.a>
-          </motion.div>
+              <motion.a
+                href="#Progetti"
+                variants={textVariants}
+                className=" border border-white bg-transparent hover:bg-aqua-500 hover:border-aqua-500 text-white font-bold py-5 px-8 rounded-lg"
+              >
+                I nostri progetti
+              </motion.a>
+              <motion.a
+                href="#Contatti"
+                variants={textVariants}
+                className=" border border-white bg-white text-black font-bold py-5 px-8 rounded-lg hover:bg-aqua-500 hover:text-black hover:border-aqua-500"
+                whileHover={{
+                  background: "aqua",
+                  transition: { duration: 0.5 },
+                }}
+              >
+                Scrivici
+              </motion.a>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
-      <motion.div
-        variants={sliderVariants}
-        initial="initial"
-        animate="animate"
-        className="slidingTextContainer"
-      >
-        Design Develop Imagine Animate
-      </motion.div>
     </div>
   );
 };

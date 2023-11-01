@@ -33,7 +33,7 @@ const Scrollbar = () => {
   }, []);
 
   return (
-    <div className="scroll-indicator">
+    <div className="scroll-indicator hidden xl:flex">
       <a href="#Home" data-section="Home"></a>
       <a href="#Servizi" data-section="Servizi"></a>
       <a href="#Progetti" data-section="Progetti"></a>

@@ -2,7 +2,7 @@
 
 .services{
     background: linear-gradient(180deg, #111132, #0c0c1d);
-    
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -118,8 +118,6 @@
     }
 
     .listContainer{
-        flex: 2;
-        display: flex;
         max-width: 1366px;
         margin: auto;
         gap: 20px;
@@ -134,6 +132,7 @@
 
         .box{
             padding: 50px;
+            height: 400px;
             border: 0.5px solid gray;
             display: flex;
             flex-direction: column;

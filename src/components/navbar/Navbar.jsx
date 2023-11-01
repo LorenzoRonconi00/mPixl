@@ -10,7 +10,7 @@ const NavBar = () => {
           <img
             src={Logo}
             alt="logo"
-            className="md:h-12 h-8 text-white cursor-pointer ml-10 mt-6"
+            className="md:h-12 h-8 text-white cursor-pointer ml-0 mt-0 md:ml-10 md:mt-6"
           />
         </a>
         {/* Items */}

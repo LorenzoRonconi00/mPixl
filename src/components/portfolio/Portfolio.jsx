@@ -37,9 +37,9 @@ const Portfolio = () => {
 
   return (
     
-    <div ref={targetRef} className="relative h-[300vh] z-10 mt-52">
+    <div ref={targetRef} className="relative h-[300vh] z-10 mt-96">
       <div className="sticky top-0 w-screen flex h-screen justify-center overflow-y-hidden parallax">
-        <h1 className="absolute md:text-4xl font-semibold">Progetti Realizzati</h1>
+        <h1 className="absolute md:text-4xl font-semibold top-24">Progetti Realizzati</h1>
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
