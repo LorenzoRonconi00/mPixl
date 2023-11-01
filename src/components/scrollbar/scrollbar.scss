@@ -10,6 +10,10 @@
     gap: 80px;
     z-index: 999;
 
+    @include mobile{
+        display: none;
+    }
+
     a{
         padding: 10px;
         position: relative;

@@ -39,15 +39,15 @@ const Portfolio = () => {
     
     <div ref={targetRef} className="relative h-[300vh] z-10 mt-52">
       <div className="sticky top-0 w-screen flex h-screen justify-center overflow-y-hidden parallax">
-        <h1 className="absolute text-4xl font-bold">Progetti Realizzati</h1>
+        <h1 className="absolute md:text-4xl font-semibold">Progetti Realizzati</h1>
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
           })}
         </motion.div>
         
-        <motion.div className="mountains pointer-events-none"></motion.div>
-        <motion.div className="stars pointer-events-none" style={{ x: yBg, opacity: "20%" }}></motion.div>
+        <motion.div className="hidden md:mountains md:pointer-events-none"></motion.div>
+        <motion.div className="hidden md:stars md:pointer-events-none" style={{ x: yBg, opacity: "20%" }}></motion.div>
       </div>
     </div>
    
@@ -59,7 +59,7 @@ export const Card = ({ card }) => {
     <a
       href={card.url}
       key={card.id}
-      className="group relative h-[350px] w-[750px] overflow-hidden bg-neutral-200 mt-96 cursor-pointer"
+      className="group relative h-[180px] w-[300px] md:h-[350px] md:w-[750px] overflow-hidden bg-neutral-200 mt-96 cursor-pointer"
     >
       <div
         style={{
@@ -70,7 +70,7 @@ export const Card = ({ card }) => {
         className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
       ></div>
       <div className="absolute inset-0 z-10 grid place-content-end w-full">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-3xl font-black uppercase text-white backdrop-blur-sm m-auto px-10">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 md:p-8 md:text-3xl p-5 font-black uppercase text-white backdrop-blur-sm m-auto px-10">
           {card.title}
         </p>
       </div>

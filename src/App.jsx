@@ -1,5 +1,6 @@
 import "./app.scss";
 import Contact from "./components/contact/Contact";
+import Cursor from "./components/cursor/Cursor";
 import Hero from "./components/hero/Hero";
 import NavBar from "./components/navbar/Navbar";
 import Parallax from "./components/parallax/Parallax";
@@ -27,6 +28,7 @@ const App = () => {
           }}
         />
       } */}
+      {/* <Cursor /> */}
       <Scrollbar />
       <NavBar />
       <section id="Home">

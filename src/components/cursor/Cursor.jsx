@@ -1,40 +1,40 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./cursor.scss";
-import { motion } from "framer-motion";
+
 
 const Cursor = () => {
 
-    const [mousePosition, setMousePosition] = useState({
-        x: 0,
-        y: 0
-    });
-    
-    const [cursorVariant, setCursorVariant] = useState("default");
-
     useEffect(() => {
-        const mouseMove = e => {
-            setMousePosition({
-                x: e.clientX,
-                y: e.clientY
+        let outline = document.querySelector('.outline');
+        let cursor = document.querySelector('.cursor');
+        let links = document.querySelectorAll('a');
+
+        document.addEventListener('mousemove', function(e){
+            let x = e.clientX;
+            let y = e.clientY;
+
+            outline.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
+            cursor.style.transform = `translate( calc(${x}px - 50%), calc(${y}px - 50%) )`;
+        });
+
+        links.forEach((link) => {
+            link.addEventListener("mouseover", function() {
+                outline.classList.add('hover');
+                cursor.classList.add('hover');
+            });
+            link.addEventListener("mouseleave", function() {
+                outline.classList.remove('hover');
+                cursor.classList.remove('hover');
             })
-        }
-
-        window.addEventListener("mousemove", mouseMove)
-
-        return () => {
-            window.removeEventListener("mousemove", mouseMove);
-        }
+        });
     }, []);
 
-    const variants = {
-        default: {
-            x: mousePosition.x - 16,
-            y: mousePosition.y - 16
-        }
-    }
 
     return ( 
-        <motion.div className="cursor" variants={variants} animate={cursorVariant}/>
+        <div>
+            <div className="outline"></div>
+            <div className="cursor"></div>
+        </div>
      );
 }
  

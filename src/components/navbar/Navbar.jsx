@@ -10,11 +10,11 @@ const NavBar = () => {
           <img
             src={Logo}
             alt="logo"
-            className="h-12 text-white cursor-pointer ml-10"
+            className="md:h-12 h-8 text-white cursor-pointer ml-10 mt-6"
           />
         </a>
         {/* Items */}
-        <div className="flex items-center justify-center gap-10 text-[22px] lowercase">
+        <div className="hidden md:flex md:items-center md:justify-center md:gap-10 md:text-[22px] md:lowercase">
           <a href="#Home" className="nav-link">
             Home
             <span className="sr-only">Home</span>

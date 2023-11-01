@@ -55,7 +55,7 @@ const Hero = () => {
             Il tuo Sito in pochi click
           </motion.h1>
           <motion.div variants={textVariants} className="buttons">
-            <motion.a href="#Progetti" variants={textVariants}>
+            <motion.a href="#Progetti" variants={textVariants} className="">
               I nostri progetti
             </motion.a>
             <motion.a
@@ -70,6 +70,7 @@ const Hero = () => {
                 background: "aqua",
                 transition: { duration: 0.5 },
               }}
+              className="m-4"
             >
               Scrivici
             </motion.a>

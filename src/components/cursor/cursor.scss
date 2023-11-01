@@ -1,14 +1,41 @@
 @import "../../app.scss";
 
-.cursor{
-    background-color: aqua;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
+.outline{
+    width: 54px;
+    height: 54px;
+    border-radius: 100%;
+    background: #fff;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 998;
+    z-index: 9999;
+    transform: translate(-64px, -64px);
+    pointer-events: none;
+    //mix-blend-mode: darken;
+
+    @include mobile{
+        display: none;
+    }
+}
+
+.outline.hover{
+    width: 99px;
+    height: 99px;
+    mix-blend-mode: difference;
+}
+
+.cursor{
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    background: #fff;
+    border: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    transform: translate(-8px, -8px);
+    pointer-events: none;
 
     @include mobile{
         display: none;
