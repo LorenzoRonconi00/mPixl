@@ -21,6 +21,29 @@ const variants = {
   },
 };
 
+const items = [
+  {
+    title: "Design",
+    description:
+      "Rendi unici i tuoi siti web, con un design personalizzato che cattura l'essenza del tuo marchio e affascina i visitatori.",
+  },
+  {
+    title: "Development",
+    description:
+      "Nel processo di sviluppo del tuo sito web, creiamo soluzioni personalizzate per massimizzare la tua presenza online.",
+  },
+  {
+    title: "Innovazione",
+    description:
+      "Sfruttiamo tecnologie avanzate e framework innovativi per offrire esperienze web coinvolgenti e all'avanguardia.",
+  },
+  {
+    title: "Manutenibilitá",
+    description:
+      "Garantiamo assistenza tempestiva per aggiornamenti, backup e risoluzione di problemi, assicurando un funzionamento ottimale.",
+  },
+];
+
 const Services = () => {
   const ref = useRef();
 
@@ -28,72 +51,45 @@ const Services = () => {
 
   return (
     <motion.div
-      className="services h-screen"
+      className="services h-full bg-gradient-to-b from-[#111132] to-[#0c0c1d] flex flex-col items-center justify-center"
       variants={variants}
       initial="initial"
       ref={ref}
       animate={"animate"}
     >
-
-      <motion.div className="titleContainer pt-20" variants={variants}>
-        <div className="title">
+      <motion.div
+        className="titleContainer pt-24 text-center"
+        variants={variants}
+      >
+        <div className="title mb-16 text-6xl font-thin">
           <h1>
-            <b>Sviluppo</b> e
-            <b> Design Web</b>
+            <b>Sviluppo</b> e<b> Design Web</b>
           </h1>
+          per il tuo <b>Successo.</b>
         </div>
-        <div className="title">
-          <h1>
-            per il tuo{" "}
-            <b>Successo.</b>
-          </h1>
-          <a href="#Progetti">COSA REALIZZIAMO</a>
-        </div>
+        <a
+          className="bg-[#cf8bea] rounded-full py-5 px-6 text-black text-center text-2xl font-bold border-none transition-colors duration-500 hover:bg-[#e6a7ff]"
+          href="#Progetti"
+        >
+          COSA REALIZZIAMO
+        </a>
       </motion.div>
-      <motion.div className="listContainer px-10 lg:px-16 pb-10 grid xl:grid-cols-4 grid-cols-2" variants={variants}>
-        <div
-          className="box"
-        >
-          <h2>Design</h2>
-          <p>
-            Rendi unici i tuoi siti web, con un design personalizzato che
-            cattura l'essenza del tuo marchio e affascina i visitatori.
-          </p>
-          <button>Vai</button>
-        </div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Development</h2>
-          <p>
-            Nel processo di sviluppo del tuo sito web, creiamo soluzioni
-            personalizzate per massimizzare la tua presenza online.
-          </p>
-          <button>Vai</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Innovazione</h2>
-          <p>
-            Sfruttiamo tecnologie avanzate e framework innovativi per offrire
-            esperienze web coinvolgenti e all'avanguardia.
-          </p>
-          <button>Vai</button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Manutenibilitá</h2>
-          <p>
-            Garantiamo assistenza tempestiva per aggiornamenti, backup e
-            risoluzione di problemi, assicurando un funzionamento ottimale.
-          </p>
-          <button>Vai</button>
-        </motion.div>
+      <motion.div
+        className="listContainer mt-24 px-10 lg:px-16 grid md:grid-cols-2 grid-cols-1 gap-5 max-w-6xl"
+        variants={variants}
+      >
+        {items.map((item, index) => (
+          <motion.div
+            className="box"
+            key={index}
+          >
+            <h2 className=" font-bold text-4xl pb-8 text-center">{item.title}</h2>
+            <p className="pb-5 text-xl text-center">{item.description}</p>
+            <div className="w-full flex justify-center">
+              <button className="bg-[#cf8bea] py-3 px-10 rounded-lg text-black font-bold">Vai</button>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
     </motion.div>
   );

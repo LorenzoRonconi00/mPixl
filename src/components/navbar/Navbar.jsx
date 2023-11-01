@@ -3,14 +3,14 @@ import "./navbar.scss";
 
 const NavBar = () => {
   return (
-    <div className="fixed top-0 z-50 h-20 w-full items-center px-5 pt-5">
-      <div className="INNER-CONTAINER flex flex-row justify-between">
+    <div className="fixed top-0 z-50 h-20 w-screen items-center  backdrop-blur-sm border-b border-neutral-900 flex align-middle px-5">
+      <div className="INNER-CONTAINER w-full flex flex-row justify-between align-middle">
         {/* Logo */}
         <a href="#Home">
           <img
             src={Logo}
             alt="logo"
-            className="md:h-12 h-8 text-white cursor-pointer ml-0 mt-0 md:ml-10 md:mt-6"
+            className="h-8 mt-1 text-white cursor-pointer align-middle"
           />
         </a>
         {/* Items */}
@@ -27,7 +27,7 @@ const NavBar = () => {
             Progetti
             <span className="sr-only">Progetti</span>
           </a>
-          <a href="#Contatti" className="nav-link mr-10">
+          <a href="#Contatti" className="nav-link">
             Contatti
             <span className="sr-only">Contatti</span>
           </a>

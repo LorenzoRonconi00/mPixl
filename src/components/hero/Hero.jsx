@@ -50,13 +50,13 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2
-            className="px-5 md:text-md leading-7 text-3xl text-[#cf8bea] tracking-wider"
+            className="px-5 md:text-md leading-7 text-3xl text-[#cf8bea] tracking-wider text-center"
             variants={textVariants}
           >
             Benvenuto in mPixl!
           </motion.h2>
           <motion.h1
-            className="px-5 mt-10 text-6xl"
+            className="px-5 mt-10 text-6xl text-center"
             variants={textVariants}
           >
             Il tuo Sito in pochi click.
@@ -76,7 +76,7 @@ const Hero = () => {
               <motion.a
                 href="#Contatti"
                 variants={textVariants}
-                className=" border border-white bg-white text-black font-bold py-5 px-8 rounded-lg hover:bg-aqua-500 hover:text-black hover:border-aqua-500"
+                className=" border border-white bg-white text-black font-bold py-5 px-8 rounded-lg hover:bg-aqua-500 hover:text-black hover:border-aqua-500 text-center"
                 whileHover={{
                   background: "aqua",
                   transition: { duration: 0.5 },
