@@ -1,9 +1,11 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-import Parallax from "../parallax/Parallax";
-import "./parallax.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "./portfolio.scss";
 
-export const cards = [
+const cards = [
   {
     id: 1,
     title: "SNL Shipping",
@@ -28,53 +30,53 @@ export const cards = [
 ];
 
 const Portfolio = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
-  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const x = useTransform(scrollYProgress, [0, 1], ["30%", "-50%"]);
-
   return (
-    
-    <div ref={targetRef} className="relative h-[300vh] z-10 mt-96">
-      <div className="sticky top-0 w-screen flex h-screen justify-center overflow-y-hidden parallax">
-        <h1 className="absolute md:text-4xl font-semibold top-24">Progetti Realizzati</h1>
-        <motion.div style={{ x }} className="flex gap-4">
-          {cards.map((card) => {
-            return <Card card={card} key={card.id} />;
-          })}
-        </motion.div>
-        
-        <motion.div className="hidden md:block mountains md:pointer-events-none"></motion.div>
-        <motion.div className="hidden md:block stars md:pointer-events-none" style={{ x: yBg, opacity: "20%" }}></motion.div>
+    <div className="pt-20 grid grid-cols-1 items-center justify-center">
+      <div className=" justify-center align-middle mx-10">
+        <h1 className="text-center py-10 text-6xl font-thin">
+          I Nostri <b>Progetti</b>
+        </h1>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation={true}
+          pagination={{ type: "progressbar" }}
+          className="max-w-5xl w-full rounded-xl overflow-hidden"
+          slidesPerView={1}
+          onSlideChange={() => console.log("slide change")}
+          onSwiper={(swiper) => console.log(swiper)}
+        >
+          {cards.map((card) => (
+            <SwiperSlide
+              key={card.id}
+              className="flex flex-col justify-center items-center"
+            >
+              <div className="w-full">
+                <a href={card.url} target="_blank" rel="noreferrer">
+                  <div className="overflow-hidden h-[60vh]">
+                    <div
+                      style={{
+                        backgroundImage: `url(${card.img})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        height: "100%",
+                      }}
+                      alt={card.title}
+                      className="hover:scale-150 transition duration-500 ease-in-out"
+                    ></div>
+                  </div>
+                  <h1 className="text-3xl text-center text-white w-auto bg-neutral-600/50 py-5 px-10">
+                    {card.title}
+                  </h1>
+                  <p className="text-center text-white w-auto bg-neutral-600/50 pb-5 px-10">
+                    {card.desc}
+                  </p>
+                </a>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
-   
-  );
-};
-
-export const Card = ({ card }) => {
-  return (
-    <a
-      href={card.url}
-      key={card.id}
-      className="group relative h-[180px] w-[300px] md:h-[350px] md:w-[750px] overflow-hidden bg-neutral-200 mt-96 cursor-pointer"
-    >
-      <div
-        style={{
-          backgroundImage: `url(${card.img})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-        className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-      ></div>
-      <div className="absolute inset-0 z-10 grid place-content-end w-full">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 md:p-8 md:text-3xl p-5 font-black uppercase text-white backdrop-blur-sm m-auto px-10">
-          {card.title}
-        </p>
-      </div>
-    </a>
   );
 };
 

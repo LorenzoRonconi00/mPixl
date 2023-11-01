@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import animationData1 from "../../animation_lo7pktqf.json";
+
+import scrollJson from "./scrollanimation.json"
 
 const textVariants = {
   initial: {
@@ -87,7 +88,16 @@ const Hero = () => {
             </motion.div>
           </div>
         </motion.div>
+        <div className="absolute bottom-5">
+          
+          <Lottie className="h-20"
+            loop
+            play
+            animationData={scrollJson}
+          />
+        </div>
       </div>
+      
     </div>
   );
 };

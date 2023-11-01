@@ -29,7 +29,7 @@ const App = () => {
         />
       } */}
       {/* <Cursor /> */}
-      <Scrollbar />
+      {/*<Scrollbar />*/}
       <NavBar />
       <section id="Home">
         <Hero />

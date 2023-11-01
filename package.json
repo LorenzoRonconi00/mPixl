@@ -19,7 +19,8 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-use-scroll-snap": "^1.0.0",
-    "sass": "^1.68.0"
+    "sass": "^1.68.0",
+    "swiper": "^11.0.3"
   },
   "devDependencies": {
     "@types/react": "18.2.15",
