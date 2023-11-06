@@ -85,9 +85,6 @@ const Services = () => {
           >
             <h2 className=" font-bold text-4xl pb-8 text-center">{item.title}</h2>
             <p className="pb-5 text-xl text-center">{item.description}</p>
-            <div className="w-full flex justify-center">
-              <button className="bg-[#cf8bea] py-3 px-10 rounded-lg text-black font-bold hover:scale-125 duration-700">Vai</button>
-            </div>
           </motion.div>
         ))}
       </motion.div>
