@@ -2,11 +2,28 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+
+const navbarItems = [
+    {
+        name: "Our Story",
+        href: "#about",
+    },
+    {
+        name: "Our Work",
+        href: "#projects",
+    },
+    {
+        name: "Reach Out",
+        href: "#contact",
+    },
+];
 
 export default function Header() {
 
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [backgroundColor, setBackgroundColor] = useState('rgba(0, 0, 0)');
+    const [opacity, setOpacity] = useState(0);
+    const { theme } = useTheme();
 
     useEffect(() => {
         const updateScrollPosition = () => {
@@ -20,71 +37,46 @@ export default function Header() {
     }, []);
 
     useEffect(() => {
-        const handleBackgroundColor = () => {
+        const handleOpacity = () => {
             // Adjust these values to control the transition range and opacity levels
             const threshold = 200; // Amount of scroll needed for full opacity change
             const baseOpacity = 0; // Starting opacity for bg-zinc-950
-            const maxOpacity = 0.9; // Maximum opacity for bg-zinc-950
+            const maxOpacity = 0.95; // Maximum opacity for bg-zinc-950
             const opacity = Math.min(maxOpacity, baseOpacity + (scrollPosition / threshold) * (maxOpacity - baseOpacity));
-            return `rgba(9, 9, 11, ${opacity})`;
+            return opacity;
         };
 
-        setBackgroundColor(handleBackgroundColor());
+        setOpacity(handleOpacity());
     }, [scrollPosition]);
 
-    useEffect(() => {
-        console.log(backgroundColor);
-    }, [backgroundColor]);
-
     return (
-        <div className="fixed w-full z-10">
-            <div className="m-5">
-                <div className={`flex justify-center rounded-lg backdrop-blur-sm`} style={{ backgroundColor: backgroundColor }}>
-                    <div className="navbar">
-                        <div className="navbar-start">
-                            <div className="dropdown">
-                                <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                                </div>
-                                <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Item 1</a></li>
-                                    <li>
-                                        <a>Parent</a>
-                                        <ul className="p-2">
-                                            <li><a>Submenu 1</a></li>
-                                            <li><a>Submenu 2</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a>Item 3</a></li>
-                                </ul>
-                            </div>
-                            <a className="btn btn-ghost text-xl">
-                                <Image
-                                    className=" -ml-1"
-                                    src="/logo.png"
-                                    alt="Next.js Logo"
-                                    width={64}
-                                    height={30}
-                                    priority
-                                /></a>
+        <div className="fixed w-full z-50">
+            <div className="">
+                <div className={`flex justify-center rounded-lg `} style={{
+                    borderBottom: `1px solid rgba(255, 255, 255, ${opacity / 10})`,
+                    backdropFilter: `blur(${opacity * 8}px)`,
+                }}>
+                    <div className="flex justify-between w-full p-5">
+                        <div className="flex items-center">
+                            <Image
+                                className="-ml-1 -mb-1"
+                                src="/logowhite.svg"
+                                alt="logo"
+                                width={100}
+                                height={100}
+                            />
                         </div>
-                        <div className="navbar-center hidden lg:flex">
-                            <ul className="menu menu-horizontal px-1">
-                                <li><a>Our Story</a></li>
-                                <li>
-                                    <details>
-                                        <summary>Our Work</summary>
-                                        <ul className="p-2">
-                                            <li><a>Submenu 1</a></li>
-                                            <li><a>Submenu 2</a></li>
-                                        </ul>
-                                    </details>
-                                </li>
-                                <li><a>Reach Out</a></li>
-                            </ul>
-                        </div>
-                        <div className="navbar-end">
-                            <a className="btn">Book a call</a>
+                        <div className="flex items-center gap-6">
+
+                            {navbarItems.map((item) => (
+                                <a
+                                    key={item.name}
+                                    href={item.href}
+                                    className="text-lg font-medium text-slate-50"
+                                >
+                                    {item.name}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
