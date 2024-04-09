@@ -8,8 +8,15 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from "./ui/input"
 import { Button } from "./ui/button"
 import { Textarea } from "./ui/textarea"
+import emailjs from '@emailjs/browser';
+import { useState } from "react"
+import { toast } from "sonner"
+import { ReloadIcon } from "@radix-ui/react-icons"
 
 export default function ContactForm() {
+
+    const [loading, setLoading] = useState(false)
+
     // 1. Define your form.
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -22,14 +29,24 @@ export default function ContactForm() {
 
     // 2. Define a submit handler.
     function onSubmit(values: z.infer<typeof formSchema>) {
-        // Do something with the form values.
-        // ✅ This will be type-safe and validated.
-        console.log(values)
+        setLoading(true)
+        emailjs
+            .send("service_oam734g", "template_1nu4m6w", form.getValues(), "9qvB7rmGKUY2w8Ini")
+            .then(
+                (result) => {
+                    toast("Email has been sent.")
+                    setLoading(false)
+                },
+                (error) => {
+                    toast("Something went wrong." + error)
+                    setLoading(false)
+                }
+            );
     }
 
     return (
         <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full max-w-2xl">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 w-full max-w-2xl bg-zinc-900 p-8 rounded-lg border-zinc-800 border mb-8">
                 <FormField
                     control={form.control}
                     name="name"
@@ -77,7 +94,12 @@ export default function ContactForm() {
                         </FormItem>
                     )}
                 />
-                <Button type="submit">Submit</Button>
+                <Button type="submit" disabled={loading}>
+                    {loading && (
+                        <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                    )}
+                    Submit
+                </Button>
             </form>
         </Form>
     )

@@ -4,9 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
+
 const navbarItems = [
     {
-        name: "Our Story",
+        name: "Our Services",
         href: "#about",
     },
     {
@@ -52,12 +53,12 @@ export default function Header() {
     return (
         <div className="fixed w-full z-50">
             <div className="">
-                <div className={`flex justify-center rounded-lg `} style={{
+                <div className={`flex justify-center `} style={{
                     borderBottom: `1px solid rgba(255, 255, 255, ${opacity / 10})`,
                     backdropFilter: `blur(${opacity * 8}px)`,
                 }}>
                     <div className="flex justify-between w-full p-5">
-                        <div className="flex items-center">
+                        <a href="/" className="flex items-center">
                             <Image
                                 className="-ml-1 -mb-1"
                                 src="/logowhite.svg"
@@ -65,14 +66,15 @@ export default function Header() {
                                 width={100}
                                 height={100}
                             />
-                        </div>
-                        <div className="flex items-center gap-6">
+                        </a>
+                        <div className="items-center gap-6 hidden md:flex">
 
                             {navbarItems.map((item) => (
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-lg font-medium text-slate-50"
+                                    className="text-lg font-medium text-slate-300 hover:text-slate-50 hover-underline-animation"
+                                    
                                 >
                                     {item.name}
                                 </a>
